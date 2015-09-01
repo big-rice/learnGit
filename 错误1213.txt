@@ -1,0 +1,87 @@
+[Thread-12842][PublicUtilDBSelect.java,434][DEBUG]-20150813-09:09:53:221 17377810127:[你即将取得tlrctls表tlr_type列的值！]
+[Thread-12809][DataSourceUtils.java,890][DEBUG]-20150813-09:09:53:221 17377810127:[financemanage.login.actions.LoginAction.perform->getConnection]
+[Thread-77][DataSourceUtils.java,890][DEBUG]-20150813-09:09:53:221 17377810127:[financemanage.util.PublicUtilDBSelect.getSingleColumnValue->getConnection]
+[Thread-12708][DataSourceUtils.java,899][DEBUG]-20150813-09:09:53:221 17377810127:[financemanage.util.PublicUtilDBSelect.getTableInfoString->closeConnection]
+[Thread-12818][DataSourceUtils.java,890][DEBUG]-20150813-09:09:53:222 17377810128:[financemanage.util.PublicUtil.getZZ_Flag->getConnection]
+[Thread-12817][LoginBO.java,58][INFO]-20150813-09:09:53:222 17377810128:[进入BO方法:financemanage.login.business.LoginBO]
+[Thread-12817][DataSourceUtils.java,890][DEBUG]-20150813-09:09:53:223 17377810129:[financemanage.login.actions.LoginAction.perform->getConnection]
+[Thread-12842][PublicUtilDBSelect.java,435][DEBUG]-20150813-09:09:53:224 17377810130:[你的判断语句为： where tlrno='null']
+[Thread-12708][DataSourceUtils.java,466][DEBUG]-20150813-09:09:53:224 17377810130:[关闭连接-请求发起源：filename:[PublicUtilDBSelect.java:897]methodName[getTableInfoString]]
+[Thread-12842][DataSourceUtils.java,890][DEBUG]-20150813-09:09:53:225 17377810131:[financemanage.util.PublicUtilDBSelect.getSingleColumnValue->getConnection]
+[Thread-55][LogFilter.java,29][INFO]-20150813-09:10:50:680 17377867586:[********************创建日志对象，请求线程ID:55,url=/dwr/call/plaincall/js_menuAccess.couldAccess.dwr]
+[Thread-12798][LogFilter.java,29][INFO]-20150813-09:11:49:028 17377925934:[********************创建日志对象，请求线程ID:12798,url=/dwr/call/plaincall/__System.pageLoaded.dwr]
+[Thread-42][LogFilter.java,29][INFO]-20150813-09:12:46:895 17377983801:[********************创建日志对象，请求线程ID:42,url=/financemanage/login.do]
+[Thread-42][SessionCheckFilter.java,94][INFO]-20150813-09:12:46:897 17377983803:[当前日期：20150813 09:12:46,forbidLoginStart:20150813 00:00:00,forbidLoginEnd:20150813 07:00:00]
+[Thread-55][MenuUtil.java,261][DEBUG]-20150813-09:12:46:898 17377983804:[filename:[MenuUtil.java:261]methodName[couldAccess]]
+[Thread-12836][LogFilter.java,29][INFO]-20150813-09:11:49:035 17377925941:[********************创建日志对象，请求线程ID:12836,url=/financemanage/sessionClear.jsp]
+[Thread-12798][LogFilter.java,37][INFO]-20150813-09:13:42:021 17378038927:[********************销毁日志对象，请求线程ID:12798,url=/dwr/call/plaincall/__System.pageLoaded.dwr,响应时间：112991]
+[Thread-12798][LogFilter.java,40][ERROR]-20150813-09:13:42:023 17378038929:[********************请求线程ID:12798,url=/dwr/call/plaincall/__System.pageLoaded.dwr,响应时间过长（响应时间：112991）]
+[Thread-12836][DataSourceUtils.java,890][DEBUG]-20150813-09:13:42:023 17378038929:[financemanage.util.SysDate.getSysDate->getConnection]
+[Thread-55][MenuUtil.java,262][DEBUG]-20150813-09:13:42:023 17378038929:[role_no:cws058,cws063]
+[Thread-42][LoginBO.java,58][INFO]-20150813-09:13:42:024 17378038930:[进入BO方法:financemanage.login.business.LoginBO]
+[Thread-55][DataSourceUtils.java,890][DEBUG]-20150813-09:13:42:024 17378038930:[financemanage.menu.util.MenuUtil.couldAccess->getConnection]
+[Thread-42][DataSourceUtils.java,890][DEBUG]-20150813-09:13:42:025 17378038931:[financemanage.login.actions.LoginAction.perform->getConnection]
+<2015-8-13 上午09时14分37秒 GMT+08:00> <Warning> <Socket> <BEA-000449> <Closing the socket, as no data read from it on 9.0.170.67:49,740 during the configured idle timeout of 15 seconds.> 
+####<2015-8-13 上午09时14分37秒 GMT+08:00> <Warning> <Socket> <appsvr2> <cw_server21> <[ACTIVE] ExecuteThread: '161' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1439428477557> <BEA-000449> <Closing the socket, as no data read from it on 9.0.170.67:49,740 during the configured idle timeout of 15 seconds.> 
+<2015-8-13 上午09时14分37秒 GMT+08:00> <Warning> <Socket> <BEA-000449> <Closing the socket, as no data read from it on 9.0.170.67:49,754 during the configured idle timeout of 15 seconds.> 
+####<2015-8-13 上午09时14分37秒 GMT+08:00> <Warning> <Socket> <appsvr2> <cw_server21> <[ACTIVE] ExecuteThread: '161' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1439428477561> <BEA-000449> <Closing the socket, as no data read from it on 9.0.170.67:49,754 during the configured idle timeout of 15 seconds.> 
+[Thread-74][Tlr_freuse_menuBO.java,244][ERROR]-20150813-09:22:08:241 17378545147:[程序执行出现异常，转入异常处理]
+java.sql.SQLRecoverableException: IO 错误: 管道已断开 (errno:32)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:467)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:546)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:236)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:521)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:37)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:290)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:840)
+	at org.apache.commons.dbcp.AbandonedObjectPool.borrowObject(AbandonedObjectPool.java:74)
+	at org.apache.commons.dbcp.PoolingDataSource.getConnection(PoolingDataSource.java:95)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:540)
+	at financemanage.util.exc.ConnectionPool.getConnection(ConnectionPool.java:49)
+	at financemanage.util.exc.DataSourceUtils.getConnection(DataSourceUtils.java:105)
+	at financemanage.userDefinedMenuManage.Tlr_freuse_menuBO.deleteUserDefiendMenu(Tlr_freuse_menuBO.java:234)
+	at financemanage.menu.util.MenuUtil.couldAccess(MenuUtil.java:332)
+	at jsp_servlet._financemanage.__center_new._jspService(__center_new.java:287)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:242)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:216)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:132)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:352)
+	at weblogic.servlet.internal.TailFilter.doFilter(TailFilter.java:25)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at financemanage.util.jspZip.GzipFilter.doFilter(GzipFilter.java:29)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at financemanage.util.CacheFilter.doFilter(CacheFilter.java:33)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at financemanage.util.EncodingFilter.doFilter(EncodingFilter.java:58)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at financemanage.util.SessionCheckFilter.doFilter(SessionCheckFilter.java:143)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at financemanage.util.SysDateChangeCheckFilter.doFilter(SysDateChangeCheckFilter.java:67)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at financemanage.util.threadlocal.ThreadLocalFilter.doFilter(ThreadLocalFilter.java:34)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at com.dhcc.log.LogFilter.doFilter(LogFilter.java:32)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3288)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3254)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.provider.WlsSubjectHandle.run(WlsSubjectHandle.java:57)
+	at weblogic.servlet.internal.WebAppServletContext.doSecuredExecute(WebAppServletContext.java:2163)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2089)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2074)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1512)
+	at weblogic.servlet.provider.ContainerSupportProviderImpl$WlsRequestExecutor.run(ContainerSupportProviderImpl.java:254)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+Caused by: java.net.SocketException: 管道已断开 (errno:32)java.lang.OutOfMemoryError: GC overhead limit exceeded
+Dumping heap to java_pid13270.hprof ...
+Heap dump file created [2944896410 bytes in 359.936 secs]
+/app2/cw_app/cw_domain/bin/startWebLogic.sh[184]: 13270 强行中止
+<2015-8-13 9:34:39> <FINEST> <NodeManager> <Waiting for the process to die: 13252>
+<2015-8-13 9:34:39> <FINEST> <NodeManager> <Process is killed 13252 with Server was killed>
+<2015-8-13 9:34:39> <INFO> <NodeManager> <Server was killed>
+<2015-8-13 9:34:39> <FINEST> <NodeManager> <runMonitor returned, setting finished=true and notifying waiters>
+<2015-8-13 9:34:39> <FINEST> <NodeManager> <Finished killing process>

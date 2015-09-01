@@ -1,0 +1,204 @@
+<MAP>
+    <!-- ANAME为财务拆组包用的变量如#sys3 BNAME为总账拆组包用的变量如#sys2 -->
+    <!-- MAPFLAG 0:表示双向映射(默认) 1:表示请求报文 2:表示应答报文 -->
+    <!-- 对于没有子域的变量必须配置#sys开头的变量  1521----->
+    <PACKAGE INCLUDE="7102"><!-- 核心对财务记账 --> 
+    	<ITEM ANAME="#sys30"     BNAME="#fd30"     MAPFLAG="1" /><!-- 报文指令号 -->   
+    	<ITEM ANAME="#sys62"     BNAME="#fd63"     MAPFLAG="1" /><!-- 报文标识号 -->   
+    	<ITEM ANAME="#sys93"     BNAME="#fd67"     MAPFLAG="1" /><!-- 类型 -->   
+    	<ITEM ANAME="#s1243"   	 BNAME="#fd123"    MAPFLAG="2" /><!-- 分录 -->   
+    </PACKAGE>
+    <PACKAGE INCLUDE="1521">        
+        <ITEM ANAME="#s1051"   	BNAME="#fd32"    	MAPFLAG="1" />
+        <ITEM ANAME="#sys27"    BNAME="#fd27"     MAPFLAG="2"  />
+        <ITEM ANAME="#sys40"    BNAME="#fd39"     MAPFLAG="2"  />
+        <ITEM ANAME="#sys39"    BNAME="#fd40"     MAPFLAG="2"  />
+   			<ITEM ANAME="#sys14"    BNAME="#fd10"     MAPFLAG="2"  />
+    </PACKAGE>
+    <!-- 财务单笔支付发送报文 1511---7101  -->
+    <PACKAGE INCLUDE="7101">        
+        <ITEM ANAME="#sys64"     BNAME="#fd64"    MAPFLAG="1" /><!-- 报文编号 -->
+        <ITEM ANAME="#sys63"     BNAME="#fd63"    MAPFLAG="1" /><!-- 报文标识号 -->
+        <!--<ITEM ANAME="#sys105"    BNAME="#fd105"   MAPFLAG="1" />-->
+        <ITEM ANAME="#s105A"     BNAME="#fd31"    MAPFLAG="1" /><!-- 财务指令号 -->
+        <ITEM ANAME="#sys4"      BNAME="#fd78"    MAPFLAG="1" /><!-- 财务流水号 -->
+        <ITEM ANAME="#sys45"     BNAME="#fd45"    MAPFLAG="1" /><!-- 财务日期 -->
+        <ITEM ANAME="#s1056"     BNAME="#fd39"    MAPFLAG="1" /><!-- 交易金额 -->
+        <ITEM ANAME="#s1058"     BNAME="#fd67"    MAPFLAG="1" /><!-- 支付方式 -->
+        <ITEM ANAME="#s1051"     BNAME="#fd33"    MAPFLAG="1" /><!-- 专用挂账账号 -->
+        <ITEM ANAME="#s1057"     BNAME="#fd69"    MAPFLAG="1" /><!-- 转账方式 -->
+        <ITEM ANAME="#s1053"     BNAME="#f122C"   MAPFLAG="1" /><!-- 挂账户名 -->
+        <ITEM ANAME="#s105G"     BNAME="#fd26"    MAPFLAG="1" /><!-- 收款人开户行名 -->
+        <ITEM ANAME="#s105H"     BNAME="#fd86"    MAPFLAG="1" /><!-- 收款人开户行的行号 -->
+	<ITEM ANAME="#s105I"     BNAME="#fd30"    MAPFLAG="1" /><!-- 收款人的账号 -->
+        <ITEM ANAME="#s105J"     BNAME="#fd25"    MAPFLAG="1" /><!-- 收款人账户的户名 -->
+        <ITEM ANAME="#sys21"     BNAME="#fd21"    MAPFLAG="1" /><!-- 币种 -->
+        <ITEM ANAME="#s105D"     BNAME="#fd81"    MAPFLAG="1" /><!-- 摘要 -->
+        <ITEM ANAME="#sys25"     BNAME="#fd82"    MAPFLAG="1" /><!-- 文件标志 -->
+        <ITEM ANAME="#sys11"     BNAME="#fd11"    MAPFLAG="1" /><!-- 文件标志 -->
+        <ITEM ANAME="#s105Z"     BNAME="#fd91"    MAPFLAG="1" /><!-- 机构 -->
+        <ITEM ANAME="#s1202"     BNAME="#fd27"    MAPFLAG="1" /><!-- 交易名称 -->
+        <ITEM ANAME="#s1215"     BNAME="#fd69"    MAPFLAG="1" /><!-- 记账标志 -->
+        <ITEM ANAME="#sys70"     BNAME="#fd70"    MAPFLAG="1" /><!-- 记账标志 -->
+        <ITEM ANAME="#sys40"     BNAME="#fd40"    MAPFLAG="2"  /><!-- 核心系统日期 -->
+        <ITEM ANAME="#s1265"     BNAME="#fd29"    MAPFLAG="2"  /><!-- 核心流水号 -->
+    </PACKAGE>
+    <!-- 财务单笔收款 1512---7103-->
+    <PACKAGE INCLUDE="7103">        
+    	<ITEM ANAME="#sys4"      	 BNAME="#fd78"    MAPFLAG="1" /><!-- 财务流水号 -->
+        <!--<ITEM ANAME="#sys105"    BNAME="#fd105"   MAPFLAG="1" /> -->
+        <ITEM ANAME="#sys64"     BNAME="#fd64"    MAPFLAG="1" /><!-- 报文编号 -->
+        <ITEM ANAME="#sys63"     BNAME="#fd63"    MAPFLAG="1" /><!-- 报文标识号 -->
+        <ITEM ANAME="#s105A"     BNAME="#fd31"    MAPFLAG="1" /><!-- 财务指令号 -->
+        <ITEM ANAME="#s1265"     BNAME="#fd29"    MAPFLAG="1"  /><!-- 核心流水号 -->
+        <ITEM ANAME="#sys40"     BNAME="#fd40"    MAPFLAG="1"  /><!-- 财务流水号 -->
+        <ITEM ANAME="#s1056"     BNAME="#fd39"    MAPFLAG="1" /><!-- 交易金额 -->
+        <ITEM ANAME="#s1051"     BNAME="#fd33"    MAPFLAG="1" /><!-- 专用挂账账号 -->
+        <ITEM ANAME="#s1053"     BNAME="#f122C"   MAPFLAG="1" /><!-- 挂账户名 -->
+        <ITEM ANAME="#sys21"     BNAME="#fd21"    MAPFLAG="1" /><!-- 币种 -->
+        <ITEM ANAME="#s105D"     BNAME="#fd81"    MAPFLAG="1" /><!-- 摘要 -->
+        <ITEM ANAME="#s105I"     BNAME="#fd30"    MAPFLAG="1" /><!-- 收款人的账号 -->
+      	<ITEM ANAME="#s105Z"     BNAME="#fd91"    MAPFLAG="1" /><!-- 核心记账机构 -->
+        <ITEM ANAME="#s1202"     BNAME="#fd27"    MAPFLAG="1" /><!-- 交易名称 -->
+        <ITEM ANAME="#s1215"     BNAME="#fd69"    MAPFLAG="1" /><!-- 记账标志 -->
+        <ITEM ANAME="#sys46"     BNAME="#fd46"       /><!-- 核心收款记账日期 --><!-- 核心系统日期 -->
+        <ITEM ANAME="#s1263"     BNAME="#fd29"    MAPFLAG="2" /><!-- 核心流水号 -->
+    </PACKAGE>
+    <!-- 核心流水查询 -->
+    <PACKAGE INCLUDE="7109">        
+        <!--<ITEM ANAME="#sys105"    BNAME="#fd105"   MAPFLAG="1" />-->
+        <ITEM ANAME="#sys64"     BNAME="#fd64"    MAPFLAG="1" /><!-- 报文编号 -->
+        <ITEM ANAME="#sys63"     BNAME="#fd63"    MAPFLAG="1" /><!-- 报文标识号 -->
+        <ITEM ANAME="#s105A"     BNAME="#fd31"    MAPFLAG="1" /><!-- 财务指令号 -->
+        <ITEM ANAME="#s105Z"     BNAME="#fd91"    MAPFLAG="1" /><!-- 核心记账机构 -->
+        <ITEM ANAME="#sys46"     BNAME="#fd46"    MAPFLAG="1" /><!-- 核心收款记账日期 -->
+        <ITEM ANAME="#s1265"     BNAME="#fd29"    MAPFLAG="1" /><!-- 核心流水号 -->
+        <ITEM ANAME="#s1051"     BNAME="#fd33"    MAPFLAG="1" /><!-- 收款账号 -->
+        <ITEM ANAME="#s1053"     BNAME="#fd25"    MAPFLAG="1" /><!-- 收款户户名 -->
+	<ITEM ANAME="#s105K"     BNAME="#fd69"    MAPFLAG="2" /><!-- 核心状态 -->
+        <ITEM ANAME="#s1056"     BNAME="#fd39"    MAPFLAG="2" /><!-- 交易金额 -->
+    </PACKAGE>
+     <!-- 财务指令状态查询 -->
+    <PACKAGE INCLUDE="1519">        
+        <ITEM ANAME="#sys64"     BNAME="#fd64"    MAPFLAG="1" /><!-- 报文编号 -->
+        <ITEM ANAME="#sys63"     BNAME="#fd63"    MAPFLAG="1" /><!-- 报文标识号 -->
+        <ITEM ANAME="#s1055"     BNAME="#fd31"    MAPFLAG="1" /><!-- 原交易财务指令号 -->
+        <ITEM ANAME="#s105B"     BNAME="#fd44"    MAPFLAG="1" /><!-- 原交易日期 -->
+        <ITEM ANAME="#s105C"     BNAME="#fd29"    MAPFLAG="1" /><!-- 原财务流水号 -->
+        <ITEM ANAME="#sys62"     BNAME="#fd62"    MAPFLAG="1" /><!-- 原报文交易代码 -->
+        <ITEM ANAME="#sys46"     BNAME="#fd46"    MAPFLAG="2" /><!-- 原交易核心交易日期 -->
+        <ITEM ANAME="#s1265"     BNAME="#fd45"    MAPFLAG="2" /><!-- 核心流水号 -->
+        <ITEM ANAME="#s1056"     BNAME="#fd39"    MAPFLAG="2" /><!-- 原交易核心记账金额 -->
+        <!-- 原#f1053现#fd69 -->
+        <ITEM ANAME="#s105K"     BNAME="#fd69"    MAPFLAG="2" /><!-- 原交易核心记账状态 -->
+    </PACKAGE>
+    <!-- 财务与核心对明细账 -->
+    <PACKAGE INCLUDE="1522">
+    	<ITEM ANAME="#sys4"      	 BNAME="#fd4"     MAPFLAG="1" /><!-- 财务流水号 -->        
+        <ITEM ANAME="#sys64"     BNAME="#fd64"    MAPFLAG="1" /><!-- 报文编号 -->
+        <ITEM ANAME="#sys63"     BNAME="#fd63"    MAPFLAG="1" /><!-- 报文标识号 -->
+        <ITEM ANAME="#s105A"     BNAME="#fd31"    MAPFLAG="1" /><!-- 财务指令号 -->
+        <ITEM ANAME="#sys91"     BNAME="#fd91"    MAPFLAG="1" /><!-- 对账机构 -->
+        <ITEM ANAME="#sys44"     BNAME="#fd44"     /><!-- 对账日期 -->
+        <!-- 原#sys25现#fd27-->
+        <ITEM ANAME="#sys27"     BNAME="#fd25"    MAPFLAG="2" /><!-- 对账文件名 -->
+    </PACKAGE>
+    <!-- 财务指令撤销接口 -->
+    <PACKAGE INCLUDE="2901">
+    	<ITEM ANAME="#sys4"      BNAME="#fd4"     MAPFLAG="1" /><!-- 财务流水号 -->        
+        <ITEM ANAME="#sys64"     BNAME="#fd64"    MAPFLAG="1" /><!-- 报文编号 -->
+        <ITEM ANAME="#sys63"     BNAME="#fd63"    MAPFLAG="1" /><!-- 报文标识号 -->
+        <ITEM ANAME="#s1055"     BNAME="#fd31"    MAPFLAG="1" /><!-- 原财务指令号 -->
+        <ITEM ANAME="#sys44"     BNAME="#fd44"    MAPFLAG="1"/><!-- 原交易日期 -->
+        <ITEM ANAME="#s1266"     BNAME="#fd29"    MAPFLAG="1"/><!-- 原财务流水号 -->
+        <ITEM ANAME="#sys70"     BNAME="#fd70"    MAPFLAG="1"/><!-- 原财务流水号 -->
+        <ITEM ANAME="#s105K"     BNAME="#fd69"    MAPFLAG="2" /><!-- 原交易核心记账状态 -->
+    </PACKAGE>
+    <!-- 支付系统行号验证 -->
+    <PACKAGE INCLUDE="2902">
+    	<ITEM ANAME="#sys4"      BNAME="#fd4"     MAPFLAG="1" /><!-- 财务流水号 -->        
+        <ITEM ANAME="#sys64"     BNAME="#fd64"    MAPFLAG="1" /><!-- 报文编号 -->
+        <ITEM ANAME="#sys63"     BNAME="#fd63"    MAPFLAG="1" /><!-- 报文标识号 -->
+        <ITEM ANAME="#s105A"     BNAME="#fd31"    MAPFLAG="1" /><!-- 财务指令号 -->
+        <ITEM ANAME="#105H"      BNAME="#fd86"    MAPFLAG="2"/><!-- 支付系统行号 -->
+        <ITEM ANAME="#s105G"     BNAME="#fd25"    MAPFLAG="2" /><!-- 支付系统行名 -->
+    </PACKAGE>
+    <!-- 支付系统行号验证 -->
+    <PACKAGE INCLUDE="7108">
+    	<ITEM ANAME="#sys4"      BNAME="#fd4"     MAPFLAG="1" /><!-- 财务流水号 -->        
+        <ITEM ANAME="#sys64"     BNAME="#fd64"    MAPFLAG="1" /><!-- 报文编号 -->
+        <ITEM ANAME="#sys63"     BNAME="#fd63"    MAPFLAG="1" /><!-- 报文标识号 -->
+        <ITEM ANAME="#s105A"     BNAME="#fd31"    MAPFLAG="1" /><!-- 财务指令号 -->
+        <ITEM ANAME="#s105H"     BNAME="#fd30"    /><!-- 支付系统行号 -->
+        <ITEM ANAME="#s105G"     BNAME="#fd25"    MAPFLAG="2" /><!-- 支付系统行名 -->
+    </PACKAGE>
+    <!-- 7110 ---7113  -->
+    <PACKAGE INCLUDE="7113">
+    	<ITEM ANAME="#sys4"      BNAME="#fd4"     MAPFLAG="1" /><!-- 财务流水号 -->        
+        <ITEM ANAME="#sys64"     BNAME="#fd64"    MAPFLAG="1" /><!-- 报文编号 -->
+        <ITEM ANAME="#sys63"     BNAME="#fd63"    MAPFLAG="1" /><!-- 报文标识号 -->
+        <ITEM ANAME="#s105A"     BNAME="#fd31"    MAPFLAG="1" /><!-- 财务指令号 -->
+        <ITEM ANAME="#s1051"     BNAME="#fd91"    MAPFLAG="1" />
+        <ITEM ANAME="#sys27"     BNAME="#fd27"    MAPFLAG="2" />
+    </PACKAGE>
+    <PACKAGE INCLUDE="7111">
+    	<ITEM ANAME="#sys4"      BNAME="#fd4"     MAPFLAG="1" /><!-- 财务流水号 -->        
+        <ITEM ANAME="#sys64"     BNAME="#fd64"    MAPFLAG="1" /><!-- 报文编号 -->
+        <ITEM ANAME="#sys63"     BNAME="#fd63"    MAPFLAG="1" /><!-- 报文标识号 -->
+        <ITEM ANAME="#s105A"     BNAME="#fd31"    MAPFLAG="1" /><!-- 财务指令号 -->
+        <ITEM ANAME="#s1051"     BNAME="#fd30"    MAPFLAG="1" /><!-- 专用挂账账号 -->
+        <ITEM ANAME="#sys44"     BNAME="#fd44"     /><!-- 对账日期 -->
+        <ITEM ANAME="#sys46"     BNAME="#fd46"     /><!-- 核心收款记账日期 --><!-- 核心系统日期 -->
+        <ITEM ANAME="#s1052"     BNAME="#fd34"    MAPFLAG="1" />
+        <ITEM ANAME="#sys27"     BNAME="#fd25"    MAPFLAG="1" /><!-- 对账文件名 -->
+    </PACKAGE>
+    <PACKAGE INCLUDE="K970"><!---贴现票据查询--->
+    	<ITEM ANAME="#sys4"      BNAME="#fd4"     MAPFLAG="1" /><!-- 财务流水号 -->        
+        <ITEM ANAME="#sys64"     BNAME="#fd64"    MAPFLAG="1" /><!-- 报文编号 -->
+        <ITEM ANAME="#sys63"     BNAME="#fd63"    MAPFLAG="1" /><!-- 报文标识号 -->
+        <ITEM ANAME="#sys27"     BNAME="#fd25"    MAPFLAG="1" /><!-- 对账文件名 -->
+    </PACKAGE>
+    <PACKAGE>
+	<ITEM ANAME="#sys24"    BNAME="#fd2"  	MAPFLAG="1"/>
+	<ITEM ANAME="#sys24"    BNAME="#fd3"  	MAPFLAG="1"/>
+	<ITEM ANAME="#sys23"    BNAME="#fd7"   	MAPFLAG="1"/>
+	<ITEM ANAME="#sys5"     BNAME="#fd5"   	MAPFLAG="1"/>
+	<ITEM ANAME="#sys34"    BNAME="#f0967" 	MAPFLAG="1"/>
+	<ITEM ANAME="#sys35"    BNAME="#f096C" 	MAPFLAG="1"/>
+	<ITEM ANAME="#sys5"    	BNAME="#f096D" 	MAPFLAG="1"/>
+	<ITEM ANAME="#sys6"    	BNAME="#f096E" 	MAPFLAG="1"/>
+	<ITEM ANAME="#sys36"   	BNAME="#f096M" 	MAPFLAG="1"/>
+	<ITEM ANAME="#sys12"    BNAME="#fd12"  	MAPFLAG="2"/>
+	<ITEM ANAME="#sys13"    BNAME="#fd13"  	MAPFLAG="2"/>
+    </PACKAGE>
+    <PACKAGE INCLUDE="7104">
+        <ITEM ANAME="#sys4"      BNAME="#fd4"     MAPFLAG="1" /><!-- 财务流水号 -->
+        <ITEM ANAME="#sys64"     BNAME="#fd64"    MAPFLAG="1" /><!-- 报文编号 -->
+        <ITEM ANAME="#sys63"     BNAME="#fd63"  /><!-- 报文标识号 -->
+        <ITEM ANAME="#s105A"     BNAME="#fd31"    MAPFLAG="1" /><!-- 财务指令号 -->
+        <ITEM ANAME="#sys2"      BNAME="#fd2"     MAPFLAG="1" />
+        <ITEM ANAME="#sys3"      BNAME="#fd3"     MAPFLAG="1" />
+        <ITEM ANAME="#sys5"      BNAME="#fd5" />
+        <ITEM ANAME="#sys25"     BNAME="#fd25" />
+        <ITEM ANAME="#sys46"     BNAME="#fd46"    MAPFLAG="2" />
+    </PACKAGE>
+    <PACKAGE INCLUDE="1523">
+        <ITEM ANAME="#sys4"      BNAME="#fd4"     MAPFLAG="1" /><!-- 财务流水号 -->
+	<ITEM ANAME="#sys11"      BNAME="#fd11"     MAPFLAG="1" />
+	<ITEM ANAME="#sys21"      BNAME="#fd21"     MAPFLAG="1" />
+	<ITEM ANAME="#sys25"      BNAME="#fd25"     MAPFLAG="1" />
+	<ITEM ANAME="#sys26"      BNAME="#fd26"     MAPFLAG="1" />
+	<ITEM ANAME="#sys28"      BNAME="#fd28"     MAPFLAG="1" />
+	<ITEM ANAME="#sys38"      BNAME="#fd38"     MAPFLAG="1" />
+        <ITEM ANAME="#sys64"     BNAME="#fd64"    MAPFLAG="1" /><!-- 报文编号 -->
+        <ITEM ANAME="#sys63"     BNAME="#fd63"  /><!-- 报文标识号 -->
+	<ITEM ANAME="#sys67"      BNAME="#fd67"     MAPFLAG="1" />
+	<ITEM ANAME="#sys78"      BNAME="#fd78"     MAPFLAG="1" />
+        <ITEM ANAME="#s105A"     BNAME="#fd31"    MAPFLAG="1" /><!-- 财务指令号 -->
+        <ITEM ANAME="#sys2"      BNAME="#fd2"     MAPFLAG="1" />
+        <ITEM ANAME="#sys3"      BNAME="#fd3"     MAPFLAG="1" />
+        <ITEM ANAME="#sys5"      BNAME="#fd5" />
+        <ITEM ANAME="#sys25"     BNAME="#fd25" />
+        <ITEM ANAME="#sys46"     BNAME="#fd46"    MAPFLAG="2" />
+    </PACKAGE>
+</MAP>
